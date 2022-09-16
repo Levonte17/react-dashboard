@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import Display from './components/Display';
+import Nav from './components/Nav';
+import Stat from './components/Stat';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Nav />
+     <section>
+      <Stat title="Reviews" data={['1,281']} />
+      <Stat title="Average Rating" data={['4.6']} />
+      <Stat title="sentiment Analysis" data={['960',<br />, '122', <br />, '321']} />
+     </section>
+     <Display title="Website Visiters" data={['821']} />
     </div>
   );
 }
